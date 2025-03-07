@@ -1,0 +1,2 @@
+# Manages git pre-commit hooks for various checks and lints.
+pre-commit==4.1.0
