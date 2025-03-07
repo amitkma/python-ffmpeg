@@ -1,0 +1,29 @@
+---
+name: 🎯 Task
+description: Create a new task for the project
+title: "[TASK] <title>"
+labels: ["todo"]
+body:
+  - type: textarea
+    attributes:
+      label: Context and Proposal
+      description: A clear and concise description of what the problem and context are. Ex. I'm always frustrated when [...]. Also, propose what the possible solutions can be or what you want to happen.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Acceptance Criteria
+      description: To accept this task we need to complete the following items
+      value: |
+        - [ ] <criteria_1>
+        - [ ] <criteria_2>
+        - [ ] <criteria_3>
+  - type: textarea
+    attributes:
+      label: Additional Context?
+      description: |
+        Links? References? Anything that will give us more context about the issue!
+
+        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
