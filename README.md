@@ -1,6 +1,6 @@
 # Python FFmpeg Docker Image
 
-[![Build Status](https://github.com/amitkma/python-ffmpeg/actions/workflows/ci.yml/badge.svg)](https://github.com/amitkma/python-ffmpeg/actions/workflows/ci.yml)
+[![Build Status](https://github.com/amitkma/python-ffmpeg/actions/workflows/ci.yml/badge.svg)](https://github.com/amitkma/python-ffmpeg/actions/workflows/ci.yml) [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/amitkma/python-ffmpeg/main.svg)](https://results.pre-commit.ci/latest/github/amitkma/python-ffmpeg/main)
 
 This repository contains a Docker image for Python with FFmpeg installed. This image is designed to provide a lightweight and efficient environment for running Python applications that require FFmpeg.
 
