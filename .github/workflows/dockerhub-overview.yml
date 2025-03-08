@@ -1,0 +1,27 @@
+---
+name: Update Docker Hub Description
+
+on: # yamllint disable
+  push:
+    branches:
+      - main
+    paths:
+      - README.md  # Run the action only if README changes
+
+jobs:
+  update-description:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update Docker Hub description
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: amitkma/python-ffmpeg
+          short-description: ${{ github.event.repository.description }}
+          readme-filepath: ./README.md
+          enable-url-completion: true

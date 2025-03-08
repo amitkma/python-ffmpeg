@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/amitkma/python-ffmpeg/actions/workflows/ci.yml/badge.svg)](https://github.com/amitkma/python-ffmpeg/actions/workflows/ci.yml)
 
-This repository contains a Docker image for Python 3.12 with FFmpeg installed. This image is designed to provide a lightweight and efficient environment for running Python applications that require FFmpeg.
+This repository contains a Docker image for Python with FFmpeg installed. This image is designed to provide a lightweight and efficient environment for running Python applications that require FFmpeg.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ This repository contains a Docker image for Python 3.12 with FFmpeg installed. T
 
 ## Features
 
-- Python 3.12
+- Python 3.12 and 3.13
 - FFmpeg installed
 - Lightweight `slim` base image
 - Pre-configured for development with pre-commit hooks
