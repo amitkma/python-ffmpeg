@@ -1,2 +1,11 @@
+# In order to add, delete or modify a dependency, please update
+# the reference here and then run:
+#
+# - `uv pip compile --output-file=requirements.txt requirements.in`
+#
+
 # Manages git pre-commit hooks for various checks and lints.
 pre-commit==4.1.0
+
+# Lint YAML files.
+yamllint==1.35.1

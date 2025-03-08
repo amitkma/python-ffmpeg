@@ -1,16 +1,29 @@
+---
 name: Build and Push Latest Docker Image
 
-on:
+on: # yamllint disable
   push:
     branches:
-      - main 
+      - main
+    paths-ignore:
+      - "docs/**"
+      - "README.md"
+      - "LICENSE"
+      - ".editorconfig"
+      - ".gitignore"
+      - ".markdownlint.yaml"
+      - ".pre-commit-config.yaml"
+      - ".yamllint.yml"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
+      - ".github/ISSUE_TEMPLATE/"
+  workflow_dispatch:  # Manual trigger
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python_version: ["3.12"]  # List of all supported Python versions
+        python_version: ["3.12", "3.13"]  # List of all supported Python versions
 
     steps:
       - name: Checkout repository
@@ -27,7 +40,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: amitkma/python-ffmpeg
-          tags:  ${{ matrix.python_version }}-slim
+          tags: ${{ matrix.python_version }}-slim
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
