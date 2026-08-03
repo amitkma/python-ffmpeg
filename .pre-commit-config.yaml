@@ -1,7 +1,7 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-json
       - id: check-toml
@@ -22,23 +22,23 @@ repos:
         description: Forces to replace line ending by the UNIX 'lf' character.
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.27.2
+    rev: v8.30.0
     hooks:
       - id: gitleaks
 
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
       - id: yamllint
         args: [--strict]
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.18.1
+    rev: v0.23.2
     hooks:
       - id: markdownlint-cli2
 
   - repo: https://github.com/hadolint/hadolint
-    rev: v2.13.1-beta
+    rev: v2.15.1
     hooks:
       - id: hadolint-docker
         name: Lint Dockerfiles
